@@ -1,0 +1,62 @@
+# Files
+{"function" : [0,"NtWriteFile"], "FileName" : [1, "\\lsass"]}
+{"function" : [0,"NtWriteFile"], "FileName" : [1, "\\wkssvc"]}
+{"function" : [0,"NtWriteFile"], "FileName" : [1, "\\MsFteWds"]}
+{"function" : [0,"NtWriteFile"], "FileName" : [1, "\\srvsvc"]}
+{"function" : [0,"NtWriteFile"], "FileName" : [1, "\\Windows\\Microsoft.NET\\Framework\\v2.0.50727\\ngen_service.log"]}
+{"function" : [0,"NtWriteFile"], "FileName" : [1, "\\Users\\max\\AppData\\Local\\Microsoft\\Windows\\Temporary Internet Files\\Content.IE5\\"]}
+{"function" : [0,"NtWriteFile"], "FileName" : [1, "\\Users\\max\\AppData\\Roaming\\Microsoft\\Windows\\Cookies\\"]}
+{"function" : [0,"NtWriteFile"], "FileName" : [1, "\\Users\\max\\AppData\\Local\\Microsoft\\Internet Explorer\\DOMStore\\"]}
+{"function" : [0,"NtWriteFile"], "FileName" : [1, "\\Users\\max\\AppData\\LocalLow\\Microsoft\\Internet Explorer\\Services\\logo_{"]}
+{"function" : [0,"NtWriteFile"], "FileName" : [1, "\\Users\\max\\AppData\\Local\\Microsoft\\Internet Explorer\\Recovery"]}
+{"function" : [0,"NtWriteFile"], "FileName" : [1, "\\Users\\max\\AppData\\LocalLow\\Microsoft\\CryptnetUrlCache\\"]}
+{"function" : [0,"NtWriteFile"], "FileName" : [1, "\\Users\\max\\AppData\\Roaming\\Macromedia\\Flash Player\\"]}
+{"function" : [0,"NtWriteFile"], "FileName" : [1, "\\Users\\max\\AppData\\Roaming\\Adobe\\Flash Player\\AssetCache\\"]}
+{"function" : [0,"NtWriteFile"], "FileName" : [1, "\\Users\\max\\AppData\\Roaming\\Microsoft\\Internet Explorer\\UserData\\"]}
+{"function" : [0,"NtWriteFile"], "FileName" : [1, "\\Users\\max\\AppData\\Local\\Microsoft\\Windows\\WER\\ReportArchive\\NonCritical"]}
+{"function" : [0,"NtWriteFile"], "FileName" : [1, "\\Windows\\System32\\wbem\\Performance\\"]}
+{"function" : [0,"NtWriteFile"], "FileName" : [1, "\\Users\\max\\AppData\\Roaming\\Microsoft\\Windows\\Recent\\CustomDestinations\\"]}
+{"function" : [0,"NtWriteFile"], "FileName" : [1, "\\Users\\max\\AppData\\Local\\Microsoft\\Internet Explorer\\IECompatData\\iecompatdata.xml"]}
+{"function" : [0,"NtWriteFile"], "FileName" : [1, "\\Users\\max\\AppData\\Local\\Microsoft\\Internet Explorer\\imagestore\\"]}
+{"function" : [0,"NtWriteFile"], "FileName" : [1, "\\Users\\max\\AppData\\Local\\Microsoft\\Internet Explorer\\DomainSuggestions\\"]}
+{"function" : [0,"NtWriteFile"], "FileName" : [1, "\\Users\\max\\AppData\\Local\\Microsoft\\Windows\\AppCache\\"]}
+{"function" : [0,"NtWriteFile"], "FileName" : [1, "\\Users\\max\\AppData\\Local\\Temp\\wmsetup.log"]}
+{"function" : [0,"NtWriteFile"], "FileName" : [1, "\\Users\\max\\AppData\\Local\\Microsoft\\Internet Explorer\\VersionManager\\"]}
+{"function" : [0,"NtWriteFile"], "FileName" : [1, "\\Users\\max\\AppData\\Local\\Microsoft\\Windows Media\\12.0\\WMSDKNS"]}
+{"function" : [0,"NtWriteFile"], "FileName" : [2, "\\\\Users\\\\max\\\\AppData\\\\Local\\\\Temp\\\\[A-Za-z0-9]{4,7}\\.tmp"]}
+{"function" : [0,"NtWriteFile"], "FileName" : [2, "\\\\Users\\\\max\\\\AppData\\\\Local\\\\Temp\\\\~[A-Z0-9]{18}\\.TMP"]}
+{"function" : [0,"NtWriteFile"], "FileName" : [2, "\\\\Users\\\\max\\\\AppData\\\\Local\\\\Temp\\\\Cab[A-Z0-9]{3,6}\\\\.{5,20}\\.inf"]}
+
+# Registry Keys
+{"function" : [0,"NtSetValueKey"], "KeyPath" : [1, "\\REGISTRY\\MACHINE\\SOFTWARE\\Microsoft\\WBEM"]}
+{"function" : [0,"NtSetValueKey"], "KeyPath" : [1, "\\REGISTRY\\USER\\.DEFAULT\\Software\\Classes\\Local Settings\\MuiCache"]}
+{"function" : [0,"NtSetValueKey"], "KeyPath" : [1, "\\Software\\Microsoft\\Internet Explorer"]}
+{"function" : [0,"NtSetValueKey"], "KeyPath" : [1, "\\Software\\Microsoft\\ActiveMovie\\devenum\\"]}
+{"function" : [0,"NtSetValueKey"], "KeyPath" : [1, "\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings"]}
+{"function" : [0,"NtSetValueKey"], "KeyPath" : [1, "\\Software\\Microsoft\\Direct3D\\"]}
+{"function" : [0,"NtSetValueKey"], "KeyPath" : [1, "\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\5.0\\Cache"]}
+{"function" : [0,"NtSetValueKey"], "KeyPath" : [1, "_CLASSES\\Local Settings\\MuiCache\\"]}
+{"function" : [0,"NtSetValueKey"], "KeyPath" : [1, "\\REGISTRY\\MACHINE\\SOFTWARE\\Microsoft\\Direct"]}
+{"function" : [0,"NtSetValueKey"], "KeyPath" : [1, "\\REGISTRY\\MACHINE\\SOFTWARE\\Wow6432Node\\Microsoft\\Direct"]}
+{"function" : [0,"NtSetValueKey"], "KeyPath" : [1, "\\EUDC"]}
+{"function" : [0,"NtSetValueKey"], "KeyPath" : [1, "\\Software\\Macromedia\\FlashPlayer"]}
+{"function" : [0,"NtSetValueKey"], "KeyPath" : [1, "\\Software\\Microsoft\\MediaPlayer\\"]}
+{"function" : [0,"NtSetValueKey"], "KeyPath" : [1, "\\Software\\Microsoft\\MPEG2Demultiplexer"]}
+{"function" : [0,"NtSetValueKey"], "KeyPath" : [1, "\\REGISTRY\\MACHINE\\SOFTWARE\\Microsoft\\MediaPlayer\\"]}
+{"function" : [0,"NtSetValueKey"], "KeyPath" : [1, "\\Software\\Microsoft\\Windows Media\\WMSDK\\Namespace"]}
+{"function" : [0,"NtSetValueKey"], "KeyPath" : [1, "_CLASSES\\Local Settings\\Software\\Microsoft\\Windows\\Shell\\MuiCache"]}
+
+# Process Creation
+{"function" : [0,"NtCreateUserProcess"], "CommandLine" : [0, "\"C:\\Program Files\\Internet Explorer\\iexplore.exe\""]}
+{"function" : [0,"NtCreateUserProcess"], "CommandLine" : [1, "\"C:\\Program Files\\Internet Explorer\\iexplore.exe\" SCODEF"]}
+{"function" : [0,"NtCreateUserProcess"], "ImagePathName" : [0, "C:\\Program Files\\Windows Media Player\\wmplayer.exe"]}
+{"function" : [0,"NtCreateUserProcess"], "ImagePathName" : [0, "C:\\Program Files (x86)\\Windows Media Player\\wmplayer.exe"]}
+{"process" : [0, "C:\\Program Files\\Windows Media Player\\wmplayer.exe"]}
+{"process" : [0, "C:\\Program Files\\Windows Media Player\\setup_wm.exe"]}
+{"process" : [0, "C:\\Program Files (x86)\\Windows Media Player\\wmplayer.exe"]}
+{"process" : [0, "C:\\Program Files (x86)\\Windows Media Player\\setup_wm.exe"]}
+{"function" : [0,"NtCreateUserProcess"], "CommandLine" : [1, "Microsoft\\Windows\\Customer Experience Improvement Program\\Uploader"]}
+
+
+
+
