@@ -16,22 +16,22 @@ extern LONG CALLBACK VectoredHandler(
 static Hook Hooks[] =
 {
     /*File*/
-    {L"ntdll.dll", "NtWriteFile", &MyNtWriteFile, (void**)&OldNtWriteFile},
-    {L"ntdll.dll", "NtCreateFile", &MyNtCreateFile, (void**)&OldNtCreateFile},
-    {L"ntdll.dll", "NtQueryAttributesFile", &MyNtQueryAttributesFile, (void**)&OldNtQueryAttributesFile},
+    {L"ntdll.dll", "NtWriteFile", MyNtWriteFile, (void**)&OldNtWriteFile},
+    {L"ntdll.dll", "NtCreateFile", MyNtCreateFile, (void**)&OldNtCreateFile},
+    {L"ntdll.dll", "NtQueryAttributesFile", MyNtQueryAttributesFile, (void**)&OldNtQueryAttributesFile},
 
     /*Registry*/
-    {L"ntdll.dll", "NtSetValueKey", &MyNtSetValueKey, (void**)&OldNtSetValueKey},
-    {L"ntdll.dll", "NtOpenKeyEx", &MyNtOpenKeyEx, (void**)&OldNtOpenKeyEx},
+    {L"ntdll.dll", "NtSetValueKey", MyNtSetValueKey, (void**)&OldNtSetValueKey},
+    {L"ntdll.dll", "NtOpenKeyEx", MyNtOpenKeyEx, (void**)&OldNtOpenKeyEx},
 
     /*Process*/
-    {L"ntdll.dll", "NtCreateUserProcess", &MyNtCreateUserProcess, (void**)&OldNtCreateUserProcess},
-    {L"ntdll.dll", "NtCreateProcess", &MyNtCreateProcess, (void**)&OldNtCreateProcess},
-    {L"ntdll.dll", "NtCreateProcessEx", &MyNtCreateProcessEx, (void**)&OldNtCreateProcessEx},
+    {L"ntdll.dll", "NtCreateUserProcess", MyNtCreateUserProcess, (void**)&OldNtCreateUserProcess},
+    {L"ntdll.dll", "NtCreateProcess", MyNtCreateProcess, (void**)&OldNtCreateProcess},
+    {L"ntdll.dll", "NtCreateProcessEx", MyNtCreateProcessEx, (void**)&OldNtCreateProcessEx},
 	
     /*Misc*/
-    {L"ntdll.dll", "NtDelayExecution", &MyNtDelayExecution, (void**)&OldNtDelayExecution},
-    {L"ntdll.dll", "NtFreeVirtualMemory", &MyNtFreeVirtualMemory, (void**)&OldNtFreeVirtualMemory},
+    {L"ntdll.dll", "NtDelayExecution", MyNtDelayExecution, (void**)&OldNtDelayExecution},
+    {L"ntdll.dll", "NtFreeVirtualMemory", MyNtFreeVirtualMemory, (void**)&OldNtFreeVirtualMemory},
 
 };
 
@@ -90,5 +90,4 @@ BOOL WINAPI DllMain(
         break;
     }
     return true;
-
 }

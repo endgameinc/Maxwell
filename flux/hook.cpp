@@ -57,7 +57,7 @@ void InstallHook(Hook * hook)
         totalSize += decodedInstructions[x].size;
     }
     // end distorm code
-    //log("Total size of tramp: %d", totalSize);
+    log("Total size of tramp: %d", totalSize);
     trampSize = totalSize;
 
 
@@ -107,7 +107,10 @@ void InstallHook(Hook * hook)
     int trampSize = 0;
 
     // allocate tramp buffer
-    trampAddr = VirtualAlloc(0, 37, MEM_COMMIT, PAGE_EXECUTE_READWRITE);
+    trampAddr = VirtualAlloc(0, 37, MEM_RESERVE | MEM_COMMIT, PAGE_EXECUTE_READWRITE);
+
+    if (trampAddr == NULL)
+        return;
 
     DWORD trampAddrPtr = (DWORD)trampAddr;
 
@@ -152,7 +155,7 @@ void InstallHook(Hook * hook)
 
     trampSize = totalSize;
 
-    hook->oldFunc = (void*)trampAddr;
+    *(hook->oldFunc) = trampAddr;
 
     DWORD targetFuncPtr = (DWORD)targetFunc;
 
@@ -162,7 +165,6 @@ void InstallHook(Hook * hook)
     VirtualProtect((LPVOID)targetFunc, 37, PAGE_EXECUTE_READWRITE, &dwOld);
     //else
     //	Old_NtProtectVirtualMemory(GetCurrentProcess(), &targetFunc, &bytes, PAGE_EXECUTE_READWRITE, &dwOld);
-
     //copy instructions of function to tramp
     memcpy(trampAddr, targetFunc, totalSize);
     //create a jump to original function+5 from tramp
