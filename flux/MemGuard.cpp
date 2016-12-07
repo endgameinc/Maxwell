@@ -88,7 +88,7 @@ LONG CALLBACK VectoredHandler(
 				char outFile[MAX_PATH];
 				sprintf_s(outFile, MAX_PATH, "C:\\%s_EAF_%x", MaxLog::g_baseExe, lpBuffer.BaseAddress);
 
-                //LOG("sb", "FileName", outFile, "FileData", lpBuffer.BaseAddress, lpBuffer.RegionSize);
+                LOG("sb", "FileName", outFile, "FileData", lpBuffer.BaseAddress, lpBuffer.RegionSize);
          
 				HANDLE hFile = CreateFileA(outFile, GENERIC_WRITE, FILE_SHARE_READ, 0, CREATE_NEW, FILE_ATTRIBUTE_NORMAL, 0);
 				if (hFile != INVALID_HANDLE_VALUE)
@@ -112,7 +112,7 @@ LONG CALLBACK VectoredHandler(
 	else if (ExceptionInfo->ExceptionRecord->ExceptionCode >= STATUS_ACCESS_VIOLATION && ExceptionInfo->ExceptionRecord->ExceptionCode <= STATUS_SXS_INVALID_DEACTIVATION)
 	{
 		/* Uncomment this to enable logging of crashes/access violations/etc */
-        //LOG("ll", "ExceptionCode", ExceptionInfo->ExceptionRecord->ExceptionCode, "ExceptionAddress", ExceptionInfo->ExceptionRecord->ExceptionAddress);
+        LOG("ll", "ExceptionCode", ExceptionInfo->ExceptionRecord->ExceptionCode, "ExceptionAddress", ExceptionInfo->ExceptionRecord->ExceptionAddress);
 
 		wchar_t modSource[MAX_PATH];
         MaxLog::AddressToModule((DWORD_PTR)ExceptionInfo->ExceptionRecord->ExceptionAddress, modSource, MAX_PATH);
