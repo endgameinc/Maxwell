@@ -61,7 +61,7 @@ void InstallHook(Hook * hook)
     trampSize = totalSize;
 
 
-    hook->oldFunc = (void*)trampAddr;
+    *hook->oldFunc = (void*)trampAddr;
 
     unsigned __int64 targetFuncInt = (unsigned __int64)targetFunc;
 
@@ -152,7 +152,7 @@ void InstallHook(Hook * hook)
 
     trampSize = totalSize;
 
-    hook->oldFunc = (void*)trampAddr;
+    *hook->oldFunc = (void*)trampAddr;
 
     DWORD targetFuncPtr = (DWORD)targetFunc;
 

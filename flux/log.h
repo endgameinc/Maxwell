@@ -15,7 +15,7 @@ void LogWithMeta(const char * fmt, ...);
 void ModuleThread(wchar_t * module);
 bool AddressToModule(DWORD_PTR Addr, wchar_t * modName, unsigned int size);
 
-#define LOG(fmt, ...) MaxLog::LogWithMeta(fmt, &__FUNCTION__[3], ##__VA_ARGS__)
+#define LOG(fmt, ...) MaxLog::LogWithMeta(fmt, &__FUNCTION__[2], ##__VA_ARGS__)
 
 typedef enum _MEMORY_INFORMATION_CLASS {
     MemoryBasicInformation,

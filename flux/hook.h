@@ -92,7 +92,7 @@ NTSTATUS WINAPI MyNtCreateProcess
     HANDLE ExceptionPort
 );
 
-NTSTATUS(WINAPI * OldNtCreateProcessEx)
+extern NTSTATUS(WINAPI * OldNtCreateProcessEx)
 (
     PHANDLE ProcessHandle,
     ACCESS_MASK DesiredAccess,
@@ -237,8 +237,8 @@ typedef struct
 {
     wchar_t * libName;
     char * functionName;
-    void * oldFunc;
-    void ** myFunc;
+    void * myFunc;
+    void ** oldFunc;
 } Hook;
 
 void InstallHook(Hook * hook);
